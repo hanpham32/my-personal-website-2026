@@ -7,15 +7,12 @@ export function BlogListPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log("BlogListPage: Loading posts...");
     getAllPosts()
       .then((result) => {
-        console.log("BlogListPage: Got posts:", result);
         setPosts(result);
         setLoading(false);
       })
       .catch((err) => {
-        console.error("BlogListPage: Error loading posts:", err);
         setLoading(false);
       });
   }, []);

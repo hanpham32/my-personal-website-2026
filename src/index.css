@@ -31,7 +31,7 @@
   --heading: "Inter", system-ui, Roboto, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, monospace;
 
-  font: 18px/145% var(--sans);
+  font: 16px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);

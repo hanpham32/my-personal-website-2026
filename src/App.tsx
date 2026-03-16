@@ -61,15 +61,31 @@ function App() {
           </button>
         </div>
         <div className="my-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.alt}
-              to={item.href}
-              className="mr-2 font-light text-sm uppercase hover:text-text-hovered transition-colors"
-            >
-              {item.title}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isExternal = item.href.startsWith("http");
+            if (isExternal) {
+              return (
+                <a
+                  key={item.alt}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mr-2 font-light text-sm uppercase hover:text-text-hovered transition-colors"
+                >
+                  {item.title}
+                </a>
+              );
+            }
+            return (
+              <Link
+                key={item.alt}
+                to={item.href}
+                className="mr-2 font-light text-sm uppercase hover:text-text-hovered transition-colors"
+              >
+                {item.title}
+              </Link>
+            );
+          })}
         </div>
         <hr className="border-border" />
         <Routes>
