@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { NightModeIcon } from "./components/icons/NightModeIcon";
 import { HomePage } from "./pages/HomePage";
-import { BlogPage } from "./pages/BlogPage";
+import { BlogListPage } from "./pages/BlogListPage";
+import { BlogPostPage } from "./pages/BlogPostPage";
 import { ExperiencePage } from "./pages/ExperiencePage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import Footer from "./components/Footer";
@@ -73,7 +74,8 @@ function App() {
         <hr className="border-border" />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog" element={<BlogListPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
         </Routes>

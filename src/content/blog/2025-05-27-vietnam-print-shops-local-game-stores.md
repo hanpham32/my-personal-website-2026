@@ -1,0 +1,12 @@
+---
+title: "From Vietnam Print Shops to Local Game Stores"
+date: "2025-05-27"
+---
+
+Just came back home from a Digimon event at Zulu EC. On the drive back, I reflected on the TCG matches I had played, my journey from being a kid playing card games, and the joy that cards have given me. Looking back, Yugioh was one of my core nostalgic childhood memories. I played it with the neighbor kids; I brought my cards to school to play with the other kids; I dreamed about being in live action just like in the anime and summoning the tributes monsters. It was the game that incentivized me to learn English so that I could understand and study the card effects. Being a kid living in Vietnam, I didn't have the resources to afford my own cards. What enabled me to pursue the game was my weekly allowance that I spent at the print shop. The whole process was: research the cards, make digital copies of those cards on a USB, and then bring that USB to my local print shop for printing. I made sure to prepare the front with enough back cover prints, and then used my bulk Pokemon cards as the card backbones for the prints (the Pokemon cards were fake cards that they sold in bulk during school recess).
+
+This year, I revisited those childhood games and discovered the joy that I had forgotten. It had been over 12+ years since I last played any TCG, and I guess I started revisiting it because my depression was getting worse, and seeing the cards brought me joy and gave me things to occupy my mind about. It was in January this year that I bought my first Pokemon cards (my first real cards ever). So I began to learn how to play the Pokemon TCG. I started showing up to the local card game communities in the area, getting to know everybody and I was excited to see a diverse community that also showed up. I then realized how difficult it was to get our hands on Pokemon cards due to local scalpers. The community itself made it difficult and inaccessible for new players to explore their playing style and enjoy the game.
+
+Fortunately, I was curious enough to expand my interest to other TCGs. The Digimon TCG as a game has a rich amount of game mechanics, stories drawn from the anime/comic series, and most importantly, what I personally regard highly, it's much cheaper to get into and build decks. I could spend less than $30 and have a competitive edge in my local community, while still learning about the game strategies and mechanics.
+
+Long story short, I'm yapping here because many thoughts are running on my mind and I wanted to jot these out and about.
