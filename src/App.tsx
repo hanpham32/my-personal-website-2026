@@ -47,9 +47,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div>
-        <div className="flex items-center justify-between">
-          <p className="text-xl font-bold">
+      <div className="px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+          <p className="text-xl font-bold text-nowrap">
             Han's Little Corner on the Internet!
           </p>
           <button
@@ -60,7 +60,7 @@ function App() {
             <NightModeIcon className="w-5 h-5 hover:text-text-hovered transition-colors hover:cursor-pointer" />
           </button>
         </div>
-        <div className="my-4">
+        <div className="my-4 flex flex-wrap gap-x-3 gap-y-1">
           {navItems.map((item) => {
             const isExternal = item.href.startsWith("http");
             if (isExternal) {
@@ -70,7 +70,7 @@ function App() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mr-2 font-light text-sm uppercase hover:text-text-hovered transition-colors"
+                  className="font-light text-sm uppercase hover:text-text-hovered transition-colors"
                 >
                   {item.title}
                 </a>
@@ -80,7 +80,7 @@ function App() {
               <Link
                 key={item.alt}
                 to={item.href}
-                className="mr-2 font-light text-sm uppercase hover:text-text-hovered transition-colors"
+                className="font-light text-sm uppercase hover:text-text-hovered transition-colors"
               >
                 {item.title}
               </Link>

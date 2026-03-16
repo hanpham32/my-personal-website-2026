@@ -66,8 +66,20 @@
 
 body {
   margin: 0;
-  padding-inline: 25%;
-  padding-block: 4em;
+  padding-inline: 5%;
+  padding-block: 2em;
+}
+
+@media (min-width: 640px) {
+  body {
+    padding-inline: 10%;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-inline: 25%;
+  }
 }
 
 p {
