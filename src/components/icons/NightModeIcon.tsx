@@ -1,7 +1,7 @@
 export const NightModeIcon = ({ className }: { className?: string }) => (
   <svg
     className={className}
-    viewBox="0 0 29 29"
+    viewBox="0 0 31 31"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
   >
