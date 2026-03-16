@@ -19,10 +19,18 @@ const navItems = [
   { href: "/blog", alt: "blog", title: "Blog" },
   { href: "/experience", alt: "experience", title: "Experience" },
   { href: "/projects", alt: "projects", title: "Projects" },
-  { href: "", alt: "github", title: "GitHub" },
-  { href: "", alt: "bluesky", title: "Bluesky" },
-  { href: "", alt: "twitter", title: "Twitter" },
-  { href: "", alt: "linkedin", title: "LinkedIn" },
+  { href: "https://github.com/hanpham32", alt: "github", title: "GitHub" },
+  {
+    href: "https://bsky.app/profile/han0x.bsky.social",
+    alt: "bluesky",
+    title: "Bluesky",
+  },
+  { href: "https://twitter.com/hanspham_", alt: "twitter", title: "Twitter" },
+  {
+    href: "https://www.linkedin.com/in/hansopham/",
+    alt: "linkedin",
+    title: "LinkedIn",
+  },
 ];
 
 function App() {
