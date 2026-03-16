@@ -12,7 +12,7 @@ export function BlogListPage() {
         setPosts(result);
         setLoading(false);
       })
-      .catch((err) => {
+      .catch(() => {
         setLoading(false);
       });
   }, []);
