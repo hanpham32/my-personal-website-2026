@@ -1,0 +1,109 @@
+{
+  "2026": [
+    {"title": "The Tusks of Extinction", "author": "Ray Nayler", "rating": "4"},
+    {"title": "Everything Is Tuberculosis", "author": "John Green", "rating": "5"},
+    {"title": "To Lose a War", "author": "Jon Lee Anderson", "rating": "4"}
+  ],
+  "2025": [
+    {"title": "The Invention of Design", "author": "Maggie Gram", "rating": "4"}
+  ],
+  "2024": [
+    {"title": "Starter Villain", "author": "John Scalzi", "rating": "5"},
+    {"title": "Translation State", "author": "Ann Leckie", "rating": "4"},
+    {"title": "Journeys Through ADDulthood", "author": "Sari Solden", "rating": "0"}
+  ],
+  "2023": [
+    {"title": "On Earth We're Briefly Gorgeous", "author": "Ocean Vuong", "rating": "5"},
+    {"title": "You Are the Universe", "author": "Deepak Chopra", "rating": "3"},
+    {"title": "The Mastery of Love", "author": "Miguel Ruiz", "rating": "5"},
+    {"title": "Complexity", "author": "M. Mitchell Waldrop", "rating": "3"},
+    {"title": "The Zookeepers' War", "author": "J.W. Mohnhaupt", "rating": "3"},
+    {"title": "The Code Book", "author": "Simon Singh", "rating": "5"},
+    {"title": "The Fiat Standard", "author": "Saifedean Ammous", "rating": "4"},
+    {"title": "101 Essays That Will Change The Way You Think", "author": "Brianna Wiest", "rating": "4"},
+    {"title": "The Body Keeps the Score", "author": "Bessel van der Kolk", "rating": "5"}
+  ],
+  "2022": [
+    {"title": "Homo Deus", "author": "Yuval Noah Harari", "rating": "0"},
+    {"title": "Finding Confidence in Conflict", "author": "Kwame Christian", "rating": "4"},
+    {"title": "DeFi and the Future of Finance", "author": "Campbell R. Harvey", "rating": "3"},
+    {"title": "Ego Is the Enemy", "author": "Ryan Holiday", "rating": "5"},
+    {"title": "Rich Dad, Poor Dad", "author": "Robert T. Kiyosaki", "rating": "0"},
+    {"title": "The Almanack of Naval Ravikant", "author": "Eric Jorgenson", "rating": "0"},
+    {"title": "The Infinite Machine", "author": "Camila Russo", "rating": "0"},
+    {"title": "How to Fail at Almost Everything and Still Win Big", "author": "Scott Adams", "rating": "4"}
+  ],
+  "2021": [
+    {"title": "The Midnight Library", "author": "Matt Haig", "rating": "5"},
+    {"title": "Every Thing Is F*cked", "author": "Mark Manson", "rating": "2"},
+    {"title": "Atomic Habits", "author": "James Clear", "rating": "5"},
+    {"title": "The Four Agreements", "author": "Miguel Ruiz", "rating": "4"},
+    {"title": "The Psychology of Money", "author": "Morgan Housel", "rating": "5"}
+  ],
+  "2020": [
+    {"title": "Educated", "author": "Tara Westover", "rating": "0"},
+    {"title": "Good Economics for Hard Times", "author": "Abhijit V. Banerjee", "rating": "4"},
+    {"title": "The Fine Art of Small Talk", "author": "Debra Fine", "rating": "0"},
+    {"title": "Cô gái đến từ hôm qua", "author": "Nguyễn Nhật Ánh", "rating": "0"},
+    {"title": "Còn Chút Gì Để Nhớ", "author": "Nguyễn Nhật Ánh", "rating": "0"},
+    {"title": "Small Talk", "author": "Diane Weston", "rating": "0"},
+    {"title": "Origin Story", "author": "David Christian", "rating": "5"}
+  ],
+  "2019": [
+    {"title": "Cho tôi xin một vé đi tuổi thơ", "author": "Nguyễn Nhật Ánh", "rating": "0"},
+    {"title": "Crazy Rich Asians", "author": "Kevin Kwan", "rating": "4"},
+    {"title": "Vicious", "author": "V.E. Schwab", "rating": "4"},
+    {"title": "Still Me", "author": "Jojo Moyes", "rating": "4"},
+    {"title": "Fahrenheit 451", "author": "Ray Bradbury", "rating": "0"}
+  ],
+  "2017": [
+    {"title": "Twilight", "author": "Stephenie Meyer", "rating": "5"},
+    {"title": "The Chocolate War", "author": "Robert Cormier", "rating": "0"},
+    {"title": "Rabbit Cake", "author": "Annie Hartnett", "rating": "0"},
+    {"title": "Junior Braves of the Apocalypse", "author": "Greg Smith", "rating": "4"},
+    {"title": "Barefoot Gen", "author": "Keiji Nakazawa", "rating": "5"},
+    {"title": "Holes", "author": "Louis Sachar", "rating": "5"},
+    {"title": "Outliers", "author": "Malcolm Gladwell", "rating": "5"},
+    {"title": "What If?", "author": "Randall Munroe", "rating": "5"},
+    {"title": "Akata Witch", "author": "Nnedi Okorafor", "rating": "5"},
+    {"title": "Smile", "author": "Raina Telgemeier", "rating": "4"},
+    {"title": "Crown of Midnight", "author": "Sarah J. Maas", "rating": "5"},
+    {"title": "The Giver", "author": "Lois Lowry", "rating": "5"},
+    {"title": "Our Own Private Universe", "author": "Robin Talley", "rating": "5"},
+    {"title": "Scythe", "author": "Neal Shusterman", "rating": "4"},
+    {"title": "Holy Cow", "author": "David Duchovny", "rating": "3"},
+    {"title": "Throne of Glass", "author": "Sarah J. Maas", "rating": "5"},
+    {"title": "Life As We Knew It", "author": "Susan Beth Pfeffer", "rating": "4"}
+  ],
+  "2016": [
+    {"title": "Cabin Fever", "author": "Jeff Kinney", "rating": "0"},
+    {"title": "Animal Farm", "author": "George Orwell", "rating": "0"},
+    {"title": "Ava and Pip", "author": "Carol Weston", "rating": "0"},
+    {"title": "School of the Dead", "author": "Avi", "rating": "4"},
+    {"title": "The Firefly Code", "author": "Megan Frazer Blakemore", "rating": "3"},
+    {"title": "The Midnight Star", "author": "Marie Lu", "rating": "5"},
+    {"title": "The Lost Heir", "author": "Tui T. Sutherland", "rating": "0"},
+    {"title": "The Dragonet Prophecy", "author": "Tui T. Sutherland", "rating": "5"},
+    {"title": "Deadly Cool", "author": "Gemma Halliday", "rating": "5"},
+    {"title": "The Young Elites", "author": "Marie Lu", "rating": "4"},
+    {"title": "Harry Potter and the Sorcerer's Stone", "author": "J.K. Rowling", "rating": "5"},
+    {"title": "Prodigy", "author": "Marie Lu", "rating": "5"},
+    {"title": "The Night Gardener", "author": "Jonathan Auxier", "rating": "4"},
+    {"title": "The Thief Lord", "author": "Cornelia Funke", "rating": "5"},
+    {"title": "Tangerine", "author": "Edward Bloor", "rating": "3"},
+    {"title": "The Julian Chapter", "author": "R.J. Palacio", "rating": "5"},
+    {"title": "Legend", "author": "Marie Lu", "rating": "5"},
+    {"title": "Wonder", "author": "R.J. Palacio", "rating": "5"},
+    {"title": "My Name Is Not Easy", "author": "Debby Dahl Edwardson", "rating": "2"},
+    {"title": "Sent", "author": "Margaret Peterson Haddix", "rating": "4"},
+    {"title": "Found", "author": "Margaret Peterson Haddix", "rating": "5"},
+    {"title": "Roller Girl", "author": "Victoria Jamieson", "rating": "4"},
+    {"title": "El Deafo", "author": "Cece Bell", "rating": "5"},
+    {"title": "The Rose Society", "author": "Marie Lu", "rating": "5"},
+    {"title": "Ink and Ashes", "author": "Valynne E. Maetani", "rating": "3"},
+    {"title": "Old Wolf", "author": "Avi", "rating": "2"},
+    {"title": "Took", "author": "Mary Downing Hahn", "rating": "3"},
+    {"title": "Legend: The Graphic Novel", "author": "Leigh Dragoon", "rating": "5"},
+    {"title": "Cà Phê Cùng Tony", "author": "Tony Buổi Sáng", "rating": "4"}
+  ]
+}

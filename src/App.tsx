@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { NightModeIcon } from "./components/icons/NightModeIcon";
+import { Dropdown } from "./components/Dropdown";
+import { ChevronDown } from "lucide-react";
 import { HomePage } from "./pages/HomePage";
 import { BlogListPage } from "./pages/BlogListPage";
 import { BlogPostPage } from "./pages/BlogPostPage";
 import { ExperiencePage } from "./pages/ExperiencePage";
 import { ProjectsPage } from "./pages/ProjectsPage";
+import { BooksPage } from "./pages/BooksPage";
 import Footer from "./components/Footer";
 
 type Theme = "light" | "dark";
@@ -15,7 +18,14 @@ function getSystemTheme(): Theme {
     : "light";
 }
 
-const navItems = [
+const navItems: Array<{
+  href?: string;
+  alt: string;
+  title: string;
+  type?: "link" | "dropdown";
+  icon?: typeof ChevronDown;
+  items?: Array<{ href: string; title: string }>;
+}> = [
   { href: "/", alt: "home", title: "Home" },
   { href: "/blog", alt: "blog", title: "Blog" },
   { href: "/experience", alt: "experience", title: "Experience" },
@@ -31,6 +41,13 @@ const navItems = [
     href: "https://www.linkedin.com/in/hansopham/",
     alt: "linkedin",
     title: "LinkedIn",
+  },
+  {
+    type: "dropdown",
+    title: "Media Logs",
+    alt: "media-logs",
+    icon: ChevronDown,
+    items: [{ href: "/books", title: "Books" }],
   },
 ];
 
@@ -62,7 +79,17 @@ function App() {
         </div>
         <div className="my-4 flex flex-wrap gap-x-3 gap-y-1">
           {navItems.map((item) => {
-            const isExternal = item.href.startsWith("http");
+            if (item.type === "dropdown") {
+              return (
+                <Dropdown
+                  key={item.alt}
+                  title={item.title}
+                  icon={item.icon!}
+                  items={item.items!}
+                />
+              );
+            }
+            const isExternal = item.href?.startsWith("http");
             if (isExternal) {
               return (
                 <a
@@ -79,7 +106,7 @@ function App() {
             return (
               <Link
                 key={item.alt}
-                to={item.href}
+                to={item.href!}
                 className="font-light text-sm uppercase hover:text-text-hovered transition-colors"
               >
                 {item.title}
@@ -94,6 +121,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/books" element={<BooksPage />} />
         </Routes>
         <Footer />
       </div>
