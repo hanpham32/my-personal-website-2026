@@ -13,7 +13,7 @@ export function HomePage() {
       <p>
         This space is also my canvas, my garden, my school. This is where I
         share life stories, document projects/medias, and reflect on things that
-        I occupy my mind.
+        occupy my mind.
       </p>
       <p>Cheers</p>
       <p>Han</p>
