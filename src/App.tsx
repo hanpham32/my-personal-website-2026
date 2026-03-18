@@ -9,6 +9,7 @@ import { BlogPostPage } from "./pages/BlogPostPage";
 import { ExperiencePage } from "./pages/ExperiencePage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { BooksPage } from "./pages/BooksPage";
+import { UsesPage } from "./pages/UsesPage";
 import Footer from "./components/Footer";
 
 type Theme = "light" | "dark";
@@ -66,8 +67,9 @@ function App() {
     <BrowserRouter>
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
-          <p className="text-xl font-bold text-nowrap">
-            Han's Little Corner on the Internet!
+          <p className="text-xl font-bold text-nowrap group">
+            <span className="mr-1 otter-hover">🦦</span>Han's Little Corner on
+            the Internet!
           </p>
           <button
             onClick={() =>
@@ -122,6 +124,7 @@ function App() {
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/books" element={<BooksPage />} />
+          <Route path="/uses" element={<UsesPage />} />
         </Routes>
         <Footer />
       </div>

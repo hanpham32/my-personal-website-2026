@@ -153,3 +153,18 @@ p {
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
 }
+
+.otter-hover {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.group:hover .otter-hover {
+  animation: otter-wiggle 0.4s ease-in-out;
+}
+
+@keyframes otter-wiggle {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+}
