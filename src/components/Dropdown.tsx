@@ -19,7 +19,10 @@ export function Dropdown({ title, icon: Icon, items }: DropdownProps) {
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     }
@@ -28,35 +31,42 @@ export function Dropdown({ title, icon: Icon, items }: DropdownProps) {
   }, []);
 
   return (
-    <div className="relative group" ref={dropdownRef}>
+    <div
+      className="relative"
+      ref={dropdownRef}
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        onBlur={() => setTimeout(() => setIsOpen(false), 150)}
         className="flex items-center gap-1 cursor-pointer font-light text-sm uppercase hover:text-text-hovered transition-colors bg-transparent border-none p-0"
       >
         <span>{title}</span>
-        <Icon 
-          className="w-3 h-3 transition-transform duration-200" 
-          style={{ transform: isOpen ? 'rotate(180deg)' : undefined }} 
+        <Icon
+          className="w-3 h-3 transition-transform duration-200"
+          style={{ transform: isOpen ? "rotate(180deg)" : undefined }}
         />
       </button>
-      <div
-        className={`absolute left-0 top-full mt-2 rounded shadow-lg min-w-[120px] py-1 z-50 ${
-          isOpen ? 'block' : 'hidden'
-        } group-hover:block`}
-        style={{ backgroundColor: "var(--surface)" }}
-      >
-        {items.map((item) => (
-          <Link
-            key={item.href}
-            to={item.href}
-            onClick={() => setIsOpen(false)}
-            className="block px-3 py-1.5 text-sm font-light uppercase whitespace-nowrap"
+      {isOpen && (
+        <>
+          <div className="absolute left-0 top-full w-full h-2" />
+          <div
+            className="absolute left-0 top-full mt-2 rounded shadow-lg min-w-[120px] py-1 z-50"
+            style={{ backgroundColor: "var(--surface)" }}
           >
-            {item.title}
-          </Link>
-        ))}
-      </div>
+            {items.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-1.5 text-sm font-light uppercase whitespace-nowrap"
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }
