@@ -20,9 +20,9 @@ function BookModel({
   meshCover: string;
 }) {
   const { scene: originalScene } = useGLTF("/book2.glb");
-  const coverTexture = useTexture(coverImage);
 
   const scene = originalScene.clone(true);
+  const coverTexture = useTexture(coverImage);
 
   useEffect(() => {
     coverTexture.wrapS = THREE.ClampToEdgeWrapping;
