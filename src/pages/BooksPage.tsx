@@ -1,6 +1,6 @@
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, OrbitControls, useTexture } from "@react-three/drei";
-import { useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, useRef } from "react";
 import * as THREE from "three";
 import bookData from "../../book_covers_manifest.json";
 
@@ -15,14 +15,26 @@ interface Book {
 function BookModel({
   coverImage,
   meshCover,
+  isHovered,
 }: {
   coverImage: string;
   meshCover: string;
+  isHovered: boolean;
 }) {
   const { scene: originalScene } = useGLTF("/book2.glb");
-
   const scene = originalScene.clone(true);
   const coverTexture = useTexture(coverImage);
+  const groupRef = useRef<THREE.Group>(null);
+
+  useFrame(() => {
+    if (!groupRef.current) return;
+    const target = isHovered ? Math.PI / 8 : 0;
+    groupRef.current.rotation.y = THREE.MathUtils.lerp(
+      groupRef.current.rotation.y,
+      target,
+      0.1,
+    );
+  });
 
   useEffect(() => {
     coverTexture.wrapS = THREE.ClampToEdgeWrapping;
@@ -54,8 +66,50 @@ function BookModel({
       }
     });
   }, [scene, coverTexture, meshCover]);
+  return (
+    <group ref={groupRef}>
+      <primitive object={scene} scale={2} rotation={[0, -Math.PI / 8, 0]} />
+    </group>
+  );
+}
 
-  return <primitive object={scene} scale={2} rotation={[0, -Math.PI / 2, 0]} />;
+function BookCard({ book, year }: { book: Book; year: string }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div className="flex flex-col items-center">
+      <div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="h-36 w-36 rounded-xl overflow-hidden"
+        style={{ backgroundColor: "var(--surface)" }}
+      >
+        <Canvas
+          className="h-full w-full"
+          camera={{ position: [3.7, 0, 0], fov: 75 }}
+        >
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[10, 10, 5]} intensity={4} />
+          <Suspense fallback={null}>
+            <BookModel
+              coverImage={`/book_covers/${year}/${book.filename}`}
+              meshCover={book["mesh-cover"] || "#fffce5"}
+              isHovered={isHovered}
+            />
+          </Suspense>
+          <OrbitControls
+            target={[0, 0, 0]}
+            enableZoom={false}
+            enableRotate={false}
+          />
+        </Canvas>
+      </div>
+      <div className="mt-2 text-center">
+        <p className="text-sm font-medium">{book.title}</p>
+        <p className="text-xs opacity-70">{book.author}</p>
+      </div>
+    </div>
+  );
 }
 
 export function BooksPage() {
@@ -76,33 +130,9 @@ export function BooksPage() {
                   <span className="text-sm">{year}</span>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
                 {books.map((book) => (
-                  <div key={book.filename} className="h-64">
-                    <Canvas
-                      camera={{
-                        position: [5, 0, 0],
-                        fov: 75,
-                      }}
-                    >
-                      <ambientLight intensity={0.5} />
-                      <directionalLight position={[10, 10, 5]} intensity={4} />
-                      <Suspense fallback={null}>
-                        <BookModel
-                          coverImage={`/book_covers/${year}/${book.filename}`}
-                          meshCover={book["mesh-cover"] || "#fffce5"}
-                        />
-                      </Suspense>
-                      <OrbitControls
-                        target={[0, 0, 0]}
-                        enableZoom={false}
-                        minPolarAngle={Math.PI / 2}
-                        maxPolarAngle={Math.PI / 2}
-                        minAzimuthAngle={-Math.PI / 8}
-                        maxAzimuthAngle={Math.PI / 8}
-                      />
-                    </Canvas>
-                  </div>
+                  <BookCard key={book.filename} book={book} year={year} />
                 ))}
               </div>
             </div>

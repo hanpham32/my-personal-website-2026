@@ -31,7 +31,7 @@ export function Dropdown({ title, icon: Icon, items }: DropdownProps) {
       </div>
       <div
         className="dropdown-bridge absolute left-0 top-full mt-2 hidden group-hover:block rounded shadow-lg min-w-[120px] py-1 z-50"
-        style={{ backgroundColor: "var(--dropdown-bg)" }}
+        style={{ backgroundColor: "var(--surface)" }}
       >
         {items.map((item) => (
           <Link

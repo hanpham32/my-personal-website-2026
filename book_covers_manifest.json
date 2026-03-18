@@ -721,6 +721,16 @@
       "status": "success",
       "source": "manual",
       "mesh-cover": "#6d6d6d"
+    },
+    {
+      "title": "A Psalm for the Wild-Built",
+      "author": "Becky Chambers",
+      "rating": "0",
+      "isbn": "9781250236210",
+      "filename": "monk_and_robot.jpg",
+      "status": "success",
+      "source": "manual",
+      "mesh-cover": "#7a9e7e"
     }
   ]
 }
