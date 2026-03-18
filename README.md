@@ -6,5 +6,5 @@ TODOS:
   - set up legal notice page (important for data collection)
 - [ ] add book logs
   - [x] learn and create 3d assets for this section (going to be a fun project!)
-  - [ ] add for years prior to 2026
+  - [ ] use hardcover api to sync the books; right now, the log only shows for the year 2026, which was added manually
 - add a /use page to showcase what I use day to day
