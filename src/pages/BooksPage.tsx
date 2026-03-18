@@ -105,8 +105,9 @@ function BookCard({ book, year }: { book: Book; year: string }) {
         </Canvas>
       </div>
       <div className="mt-2 text-center">
-        <p className="text-sm font-medium">{book.title}</p>
-        <p className="text-xs opacity-70">{book.author}</p>
+        <span className="text-sm font-medium">{book.title}</span>
+        <br />
+        <span className="text-xs opacity-70">{book.author}</span>
       </div>
     </div>
   );
