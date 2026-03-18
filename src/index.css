@@ -11,6 +11,7 @@
   --color-accent-bg: var(--accent-bg);
   --color-accent-border: var(--accent-border);
   --color-social-bg: var(--social-bg);
+  --color-surface: var(--surface);
   --shadow-custom: var(--shadow);
   --font-sans: "Inter", system-ui, sans-serif;
   --font-heading: "Inter", system-ui, sans-serif;
