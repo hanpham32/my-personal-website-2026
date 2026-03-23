@@ -15,6 +15,32 @@
   --shadow-custom: var(--shadow);
   --font-sans: "Inter", system-ui, sans-serif;
   --font-heading: "Inter", system-ui, sans-serif;
+
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(14deg);
+    }
+    30% {
+      transform: rotate(-8deg);
+    }
+    45% {
+      transform: rotate(14deg);
+    }
+    60% {
+      transform: rotate(-4deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  --animate-wave: wave 0.6s ease-in-out 1;
 }
 
 :root {
@@ -42,10 +68,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
 }
 
 [data-theme="dark"] {
@@ -81,7 +103,7 @@ body {
 
 @media (min-width: 1024px) {
   body {
-    padding-inline: 25%;
+    padding-inline: 15%;
   }
 }
 
@@ -91,6 +113,7 @@ p {
 
 .container {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .blog-content ul {
@@ -164,7 +187,23 @@ p {
 }
 
 @keyframes otter-wiggle {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(2px); }
-  75% { transform: translateX(-2px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+.hand-wave-icon {
+  display: inline-block;
+  transform-origin: 50% 88%;
+}
+
+.hand-wave-icon:hover {
+  animation: wave 0.67s ease-in 1;
 }
