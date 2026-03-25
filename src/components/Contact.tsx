@@ -5,12 +5,14 @@ import { useState, type Dispatch, type SetStateAction } from "react";
 
 function Item({
   name,
+  url,
   setBgColor,
   setHoverIcon,
   color,
   icon,
 }: {
   name: string;
+  url: string;
   setBgColor: Dispatch<SetStateAction<string>>;
   setHoverIcon: Dispatch<SetStateAction<string>>;
   color: string;
@@ -19,15 +21,17 @@ function Item({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div
-      className="flex justify-between pr-2"
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex justify-between pr-2 no-underline"
       onMouseEnter={() => {
         setIsHovered(true);
         setBgColor(color);
         setHoverIcon(icon);
       }}
       onMouseLeave={() => {
-        //TODO: signal hand to wave
         setIsHovered(false);
         setBgColor("");
         setHoverIcon("");
@@ -45,7 +49,7 @@ function Item({
           className={`w-5 h-5 ${isHovered ? "text-white font-semibold" : ""}`}
         />
       )}
-    </div>
+    </a>
   );
 }
 
@@ -75,6 +79,7 @@ export default function Contact() {
       <div className="flex flex-col gap-4 justify-center">
         <Item
           name="Email"
+          url="mailto:hanpham3230@gmail.com"
           setBgColor={setBgColor}
           setHoverIcon={setHoverIcon}
           color="#4C8CE4"
@@ -83,6 +88,7 @@ export default function Contact() {
         <Separator />
         <Item
           name="GitHub"
+          url="https://github.com/hanpham32"
           setBgColor={setBgColor}
           setHoverIcon={setHoverIcon}
           color="#8100D1"
@@ -91,6 +97,7 @@ export default function Contact() {
         <Separator />
         <Item
           name="Bluesky"
+          url="https://bsky.app/profile/han0x.bsky.social"
           setBgColor={setBgColor}
           setHoverIcon={setHoverIcon}
           color="#008BFF"
