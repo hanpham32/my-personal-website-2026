@@ -69,7 +69,7 @@ export default function Contact() {
         {hoverIcon ? (
           <img
             src={hoverIcon}
-            className={`invert w-16 h-16 ${hoverIcon === "/email-svgrepo-com.svg" ? "rotate-15" : "-rotate-15"}`}
+            className="invert w-16 h-16"
             alt=""
           />
         ) : (
@@ -101,7 +101,7 @@ export default function Contact() {
           setBgColor={setBgColor}
           setHoverIcon={setHoverIcon}
           color="#008BFF"
-          icon=""
+          icon="/bluesky.svg"
         />
       </div>
     </div>
