@@ -69,7 +69,7 @@ export default function Contact() {
         {hoverIcon ? (
           <img
             src={hoverIcon}
-            className="invert w-16 h-16"
+            className={`invert w-16 h-16 ${hoverIcon === "/bluesky.svg" ? "" : hoverIcon === "/email-svgrepo-com.svg" ? "rotate-15" : "-rotate-15"}`}
             alt=""
           />
         ) : (
