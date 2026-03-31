@@ -59,10 +59,10 @@ export default function Contact() {
 
   return (
     <div
-      className="container p-6 rounded-sm grid grid-cols-2 h-48 w-6/7 bg-surface"
+      className="container p-6 rounded-sm grid grid-cols-1 md:grid-cols-2 h-auto md:h-48 w-6/7 bg-surface gap-4 md:gap-0"
       style={bgColor ? { backgroundColor: bgColor } : undefined}
     >
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center mb-4 md:mb-0">
         <p className={`text-2xl font-semibold ${bgColor ? "text-white" : ""}`}>
           Contact
         </p>
